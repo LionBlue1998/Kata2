@@ -5,11 +5,19 @@
  */
 package kata2;
 
-public class Main{
+import java.util.HashMap;
+import java.util.Map;
 
+public class Main{
+    
     public static void main(String[] args) {
-        Histogram histogram = new Histogram(2,3,1,2,-4,8,3,5,5);
-        new ConsoleHistogramDisplay().show(histogram);
+        int [] data = new int []{2,3,1,2,-4,8,3,5,5,7,-9,4,1,3,5};
+        Map<Integer,Integer> histogram = new HashMap<>();
+        for (int key : data) {
+            histogram.put(key, histogram.containsKey(key) ? histogram.get(key)+ 1: 1);
+            System.out.println (key + "==>" + histogram.get (key));
+        }
+        
     }
     
 }
