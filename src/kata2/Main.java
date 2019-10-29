@@ -11,7 +11,7 @@ import java.util.Map;
 public class Main{
     
     public static void main(String[] args) {
-        int [] data = new int []{2,3,1,2,-4,8,3,5,5,7,-9,4,1,3,5};
+        Integer [] data = {2,3,1,2,-4,8,3,5,5,7,-9,4,1,3,5};
         Histogram histo = new Histogram(data);
         Map<Integer,Integer > histogr = histo.getHistogram();
         for (int key : data) {
